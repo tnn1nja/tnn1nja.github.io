@@ -25,7 +25,7 @@
             font-size: 110%;
         }.background{
             height: 100vh;
-            background-image: url('./vortex.jpg');
+            background-image: url('assets/vortex.jpg');
             filter: blur(8px);
             position: fixed;
             width: 100%;
@@ -72,6 +72,19 @@
         }p{
             color: #ccc;
             margin: 0;
+        }.github{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                text-decoration: underline;
+                color: #838383dc;
+                text-align: right;
+                padding-bottom: 1%;
+                padding-right: 1%;
+                font-size: 80%;
+        }.github:hover{
+                font-weight:normal;
+                color: #008bad;
         }
         </style>
     </head>
@@ -80,11 +93,13 @@
         <div class=background></div>
         <div class=overlay>
             <div style="height:30%"></div>
-            <img src="./whodle.png"></img>
+            <img src="assets/whodle.png"></img>
             <div style="height:1%"></div>
             <p>Random challange selector!</p>
             <div style="height:10%"></div>
             <button id="button" onclick="javascript:randomRedirect()">Random Whodle</button>
+            <br>
+            <a class="github" href="https://github.com/tnn1nja/tnn1nja.github.io">https://github.com/tnn1nja/tnn1nja.github.io</a>
         </div>
     </body>
 </html>
