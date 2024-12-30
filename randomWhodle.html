@@ -3,6 +3,7 @@
 <html>
     <head>
         <title>Whodle Randomiser</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
             function randomRedirect() {
                 const start = new Date('2024-03-01');
@@ -17,11 +18,13 @@
         </script>
         <style>
         body{
+            font-family: Arial;
             background-color: black;
-            margin: 0
-        }div{
-            height: 100vh;
+            margin: 0;
+            text-align: center;
+            font-size: 110%;
         }.background{
+            height: 100vh;
             background-image: url('./vortex.jpg');
             filter: blur(8px);
             position: fixed;
@@ -31,6 +34,7 @@
             background-repeat: no-repeat;
             background-size: cover
         }.overlay{
+            height: 100vh;
             background-color: rgba(0,0,0,0.5);
             max-width: 750px;
             margin-left: auto;
@@ -39,13 +43,35 @@
             box-sizing:border-box;
             border-left-width: 2px;
             border-right-width: 2px;
-
+        }@media (max-width: 750px){
+            .overlay{
+                width: 100%;
+                max-width: none;
+                margin: 0;
+                padding: 0;
+            }
         }img{
             width: 500px;
-            max-width: 90%;
+            max-width: 80%;
             display: flex;
             margin-left: auto;
             margin-right: auto;
+        }button{
+            padding: .5rem;
+            height: 5%;
+            width: 400px;
+            max-width: 70%;
+            border: 0 solid;
+            color: white;
+            background-color: #6365f1;
+            border-radius: .25rem;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+            font-size: 90%;
+        }p{
+            color: #ccc;
+            margin: 0;
         }
         </style>
     </head>
@@ -53,8 +79,11 @@
     <body>
         <div class=background></div>
         <div class=overlay>
+            <div style="height:30%"></div>
             <img src="./whodle.png"></img>
-            <br>
+            <div style="height:1%"></div>
+            <p>Random challange selector!</p>
+            <div style="height:10%"></div>
             <button id="button" onclick="javascript:randomRedirect()">Random Whodle</button>
         </div>
     </body>
