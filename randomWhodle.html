@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
     <head>
         <title>Whodle Randomiser</title>
@@ -15,27 +16,46 @@
             }
         </script>
         <style>
-            body{
-                font-family: Arial;
-                margin: 0;
-                padding: 200;
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #313daa;
-            }
-            button {
-                text-align: center;
-                padding: 15px 50px;
-                font-size: 50px;
-                border: none;
-                border-radius: 30px;
-                cursor: pointer;
-            }
+        body{
+            background-color: black;
+            margin: 0
+        }div{
+            height: 100vh;
+        }.background{
+            background-image: url('./vortex.jpg');
+            filter: blur(8px);
+            position: fixed;
+            width: 100%;
+            z-index: -1;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover
+        }.overlay{
+            background-color: rgba(0,0,0,0.5);
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 0 solid;
+            box-sizing:border-box;
+            border-left-width: 2px;
+            border-right-width: 2px;
+
+        }img{
+            width: 500px;
+            max-width: 90%;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+        }
         </style>
     </head>
+
     <body>
-        <button id="button" onclick="javascript:randomRedirect()">Random Whodle</button>
+        <div class=background></div>
+        <div class=overlay>
+            <img src="./whodle.png"></img>
+            <br>
+            <button id="button" onclick="javascript:randomRedirect()">Random Whodle</button>
+        </div>
     </body>
 </html>
