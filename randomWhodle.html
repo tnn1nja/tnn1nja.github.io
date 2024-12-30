@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Whodle Randomiser</title>
+        <script>
+            function randomRedirect() {
+                const start = new Date('2024-03-01');
+                const current = new Date();
+                const random = new Date(start.getTime() + Math.random() * (current.getTime() - start.getTime()));
+
+                const year = random.getFullYear();
+                const month = String(random.getMonth() + 1).padStart(2, '0');
+                const day = String(random.getDate()).padStart(2, '0');
+                window.location.href = `https://whodle.dixonary.co.uk/game/${year}-${month}-${day}`;
+            }
+        </script>
+        <style>
+            body{
+                font-family: Arial;
+                margin: 0;
+                padding: 200;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #313daa;
+            }
+            button {
+                text-align: center;
+                padding: 15px 50px;
+                font-size: 50px;
+                border: none;
+                border-radius: 30px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="button" onclick="javascript:randomRedirect()">Random Whodle</button>
+    </body>
+</html>
